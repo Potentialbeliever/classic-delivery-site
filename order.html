@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> 📝 Order| Classic Delivery Services</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header>
+    <img src="images/logo.png" alt="Classic Delivery Logo" style="height: 60px; vertical-align: middle;">
+    <span style="margin-left: 10px;">Place an Order</span>
+</header>
+
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">👤 About</a>
+    <a href="services.html">🛵 Services</a>
+    <a href="tracking.html">📍 Tracking</a>
+    <a href="faq.html">❓ FAQ</a>
+    <a href="contact.html">📞 Contact</a>
+    <a href="order.html">📝 Order</a>
+  </nav>
+    <div class="container">
+        <h2>Book Your Delivery</h2>
+        <p>Fill in the details below to place your order.</p>
+        
+        <form id="orderForm">
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" required><br><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" required><br><br>
+
+            <label for="pickup">Pickup Address:</label><br>
+            <input type="text" id="pickup" required><br><br>
+
+            <label for="delivery">Delivery Address:</label><br>
+            <input type="text" id="delivery" required><br><br>
+
+            <label for="package">Package Details:</label><br>
+            <textarea id="package" rows="4" required></textarea><br><br>
+
+            <button type="submit" class="button">Send via WhatsApp</button>
+        </form>
+        
+        <div id="confirmationMessage" style="display: none;">
+            <h3>Your order has been successfully sent!</h3>
+            <p>We will contact you shortly via WhatsApp.</p>
+        </div>
+    </div>
+
+    <footer>&copy; 2025 Classic Delivery Services. All Rights Reserved.</footer>
+
+    <!-- JavaScript to handle WhatsApp order submission -->
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the form from refreshing the page
+
+            // Get the values entered by the user
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const pickup = document.getElementById('pickup').value;
+            const delivery = document.getElementById('delivery').value;
+            const packageDetails = document.getElementById('package').value;
+
+            // Prepare the WhatsApp message
+            const message = `📦 *New Delivery Order* 🚚%0A
+👤 *Name:* ${name}%0A
+📧 *Email:* ${email}%0A
+📱 *Phone:* ${phone}%0A
+🏠 *Pickup:* ${pickup}%0A
+📍 *Delivery:* ${delivery}%0A
+📦 *Details:* ${packageDetails}`;
+
+            // Replace with your WhatsApp number (use international format without the "+" sign)
+            const whatsappNumber = "233591283636"; // Example: Your WhatsApp number
+
+            // Create the WhatsApp URL with the message
+            const url = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+            // Open WhatsApp in a new tab (this does not leave the page)
+            window.open(url, '_blank');
+
+            // Show confirmation message on the same page
+            document.getElementById('confirmationMessage').style.display = 'block';
+
+            // Optionally, clear the form
+            document.getElementById('orderForm').reset();
+        });
+    </script>
+</body>
+</html>

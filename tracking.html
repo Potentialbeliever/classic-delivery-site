@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Delivery Services - Tracking</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header style="display: flex; align-items: center; justify-content: center;">
+    <img src="images/logo.png" alt="Classic Delivery Logo" style="height: 50px; margin-right: 10px;">
+    <span>🏍️ CLASSIC DELIVERY SERVICES</span>
+  </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="tracking.html">Tracking</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="order.html">Order</a>
+    </nav>
+
+    <div class="container">
+        <h1>Track Your Delivery</h1>
+        <p>Enter your tracking number to check the status of your delivery:</p>
+        
+        <!-- Tracking Form -->
+        <form action="tracking_result.html" method="get">
+            <label for="trackingNumber">Tracking Number:</label>
+            <input type="text" id="trackingNumber" name="trackingNumber" required>
+            <button type="submit" class="button">Track</button>
+        </form>
+        
+        <!-- Placeholder for Tracking Info -->
+        <div class="tracking-info" style="display:none;">
+            <h2>Delivery Status</h2>
+            <p>Status: In Progress</p>
+            <p>Expected Delivery: 7th April 2025</p>
+        </div>
+    </div>
+    
+    <footer>&copy; 2025 Classic Delivery Services. Trusted and Timeless Logistics.</footer>
+
+</body>
+</html>

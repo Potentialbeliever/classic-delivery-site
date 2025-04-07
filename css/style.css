@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1A1A1A; /* Black background */
+    color: #FFFFFF; /* White text for readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header & Footer */
+header, footer {
+    background-color: #000000; /* Deep black for elegance */
+    padding: 20px;
+    text-align: center;
+    color: #FFD700; /* Gold */
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333333; /* Dark Gray */
+    padding: 15px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+nav a {
+    color: #FFD700; /* Gold text */
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    font-weight: bold;
+    display: inline-block;
+}
+nav a:hover {
+    color: #FFFFFF; /* White on hover */
+    text-decoration: underline;
+}
+
+/* Content Sections */
+.container {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Buttons */
+.button {
+    background-color: #FFD700; /* Gold buttons */
+    color: #1A1A1A; /* Black text for contrast */
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #E6C200; /* Slightly darker gold on hover */
+}
+
+/* Form Styles */
+form {
+    background-color: #262626; /* Dark gray background */
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFD700;
+    display: block;
+    margin-top: 10px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #A9A9A9; /* Subtle gray border */
+    border-radius: 5px;
+    background-color: #333333; /* Dark gray input background */
+    color: #FFFFFF; /* White text */
+    font-size: 16px;
+    box-sizing: border-box;
+}
+input:focus, textarea:focus {
+    border-color: #FFD700; /* Highlight with gold */
+    outline: none;
+}
+
+/* Contact Section */
+.contact-info {
+    background-color: #262626;
+    padding: 30px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.contact-info h2 {
+    color: #FFD700;
+}
+
+/* Footer */
+footer {
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+/* Mobile Styles: Adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Header font size adjustment for mobile */
+    header {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    /* Navigation adjustment for mobile */
+    nav {
+        padding: 10px;
+        text-align: center;
+    }
+    nav a {
+        font-size: 16px;
+        margin: 10px;
+        display: inline-block;
+    }
+
+    /* Button adjustments for mobile */
+    .button {
+        padding: 12px 20px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Form adjustments for mobile */
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* Contact info section adjustments */
+    .contact-info {
+        padding: 20px;
+    }
+
+    /* Container adjustments */
+    .container {
+        padding: 20px;
+    }
+
+    /* Adjust footer font size for mobile */
+    footer {
+        font-size: 12px;
+    }
+}
