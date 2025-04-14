@@ -3,33 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🏍️ Home | Classic Delivery Services</title>
+  <title>Classic Delivery Services</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header style="display: flex; align-items: center; justify-content: center;">
-    <img src="images/logo.png" alt="Classic Delivery Logo" style="height: 50px; margin-right: 10px;">
-    <span>🏍️ CLASSIC DELIVERY SERVICES</span>
-  </header>
 
-  <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="about.html">👤 About</a>
-    <a href="services.html">🛵 Services</a>
-    <a href="tracking.html">📍 Tracking</a>
-    <a href="faq.html">❓ FAQ</a>
-    <a href="contact.html">📞 Contact</a>
-    <a href="order.html">📝 Order</a>
-  </nav>
-
-  <div class="container">
-    <h1>🏍️ Fast & Trusted Motorbike Deliveries</h1>
-    <p>Reliable. Efficient. Always on time. 🕐</p>
-
-    <a href="services.html"><button class="button">🔧 Our Services</button></a>
-    <a href="order.html"><button class="button">📬 Place Order</button></a>
+<header class="header">
+  <div class="logo">
+    <img src="images/logo.png" alt="Classic Delivery Logo">
+    <h1>Classic Delivery</h1>
   </div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="order.html">Place Order</a>
+    <a href="tracking.html">Track</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <footer>© 2025 Classic Delivery Services 🛵 Swift • Secure • Smart</footer>
+<section class="hero" style="background-image: url('images/hero-bg.jpg');">
+  <div class="hero-overlay">
+    <h2>Fast • Safe • Trusted Motorbike Delivery</h2>
+    <p>Swift, secure, same-day dispatch across Accra and beyond.</p>
+    <div class="hero-buttons">
+      <a href="order.html" class="button">Place an Order</a>
+      <a href="tracking.html" class="button-outline">Track a Package</a>
+    </div>
+  </div>
+</section>
+
+<div class="feature-card">
+  <img src="images/motor.png" alt="Fast Deliveries">
+  <h3>Fast Deliveries</h3>
+  <p>Same-day and express dispatch options, always on time.</p>
+</div>
+
+<div class="feature-card">
+  <img src="images/secure.png" alt="Safe & Secure">  <!-- if you have a different image for this, swap it -->
+  <h3>Safe & Secure</h3>
+  <p>Your parcels are handled with care and professionalism.</p>
+</div>
+
+<div class="feature-card">
+  <img src="images/affordable.png" alt="Affordable Rates">
+  <h3>Affordable Rates</h3>
+  <p>Competitive pricing for individuals and businesses alike.</p>
+</div>
+
+
+<footer class="footer">
+  <p>© 2025 Classic Delivery Services • Swift • Secure • Smart</p>
+  <p>Contact: 0591283636</p>
+</footer>
+
+<a href="https://wa.me/233591283636" class="whatsapp-button" target="_blank">
+  <img src="images/whatsapp-icon.png" alt="WhatsApp Icon"> Order via WhatsApp
+</a>
+
+<script src="js/tawkto.js"></script>
+
 </body>
 </html>
