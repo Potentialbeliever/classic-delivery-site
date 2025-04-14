@@ -1,160 +1,330 @@
 /* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1A1A1A; /* Black background */
-    color: #FFFFFF; /* White text for readability */
-    margin: 0;
-    padding: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 0;
+  margin: 0;
 }
 
-/* Header & Footer */
-header, footer {
-    background-color: #000000; /* Deep black for elegance */
-    padding: 20px;
-    text-align: center;
-    color: #FFD700; /* Gold */
-    font-size: 22px;
-    font-weight: bold;
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffcc00;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation Bar */
-nav {
-    background-color: #333333; /* Dark Gray */
-    padding: 15px;
-    text-align: center;
-    flex-wrap: wrap;
-}
-nav a {
-    color: #FFD700; /* Gold text */
-    text-decoration: none;
-    font-size: 18px;
-    margin: 0 15px;
-    font-weight: bold;
-    display: inline-block;
-}
-nav a:hover {
-    color: #FFFFFF; /* White on hover */
-    text-decoration: underline;
+.header .logo img {
+  width: 50px;
+  height: 50px;
 }
 
-/* Content Sections */
-.container {
-    padding: 50px;
-    text-align: center;
+.header h1 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
 }
 
-/* Buttons */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #333;
+  color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.button,
+.button-outline {
+  padding: 12px 25px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
 .button {
-    background-color: #FFD700; /* Gold buttons */
-    color: #1A1A1A; /* Black text for contrast */
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
+  background-color: #ffcc00;
+  color: #333;
+  border: 2px solid #ffcc00;
 }
+
 .button:hover {
-    background-color: #E6C200; /* Slightly darker gold on hover */
+  background-color: #e6b800;
+  transform: scale(1.05);
 }
 
-/* Form Styles */
-form {
-    background-color: #262626; /* Dark gray background */
-    padding: 30px;
-    border-radius: 10px;
-    width: 50%;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-label {
-    font-size: 18px;
-    font-weight: bold;
-    color: #FFD700;
-    display: block;
-    margin-top: 10px;
-}
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border: 1px solid #A9A9A9; /* Subtle gray border */
-    border-radius: 5px;
-    background-color: #333333; /* Dark gray input background */
-    color: #FFFFFF; /* White text */
-    font-size: 16px;
-    box-sizing: border-box;
-}
-input:focus, textarea:focus {
-    border-color: #FFD700; /* Highlight with gold */
-    outline: none;
+.button-outline {
+  border: 2px solid #fff;
+  color: #fff;
 }
 
-/* Contact Section */
+.button-outline:hover {
+  background-color: #fff;
+  color: #333;
+  transform: scale(1.05);
+}
+
+/* Feature Card Styles */
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px;
+  text-align: center;
+}
+
+.feature-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #128c7e;
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Contact Info Section */
 .contact-info {
-    background-color: #262626;
-    padding: 30px;
-    color: #FFFFFF;
-    text-align: center;
-}
-.contact-info h2 {
-    color: #FFD700;
-}
-
-/* Footer */
-footer {
-    font-size: 14px;
-    margin-top: 50px;
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  border-radius: 10px;
 }
 
-/* Mobile Styles: Adjustments for smaller screens */
+.contact-info h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Page Hero Section */
+.page-hero {
+  background-color: #ffcc00;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-hero h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.page-hero p {
+  font-size: 18px;
+}
+
+/* Order Form Styles */
+.order-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.order-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form label {
+  margin: 12px 0 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.order-form input,
+.order-form textarea,
+.order-form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.order-form textarea {
+  resize: vertical;
+}
+
+.order-form .button {
+  margin-top: 20px;
+  background-color: #fbbf24;
+  color: #333;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.order-form .button:hover {
+  background-color: #f59e0b;
+}
+
+/* Service Page Image Adjustment */
+.service-page img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    /* Header font size adjustment for mobile */
-    header {
-        font-size: 18px;
-        padding: 15px;
-    }
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    /* Navigation adjustment for mobile */
-    nav {
-        padding: 10px;
-        text-align: center;
-    }
-    nav a {
-        font-size: 16px;
-        margin: 10px;
-        display: inline-block;
-    }
+  .hero {
+    height: 300px;
+  }
 
-    /* Button adjustments for mobile */
-    .button {
-        padding: 12px 20px;
-        font-size: 16px;
-        width: 100%;
-        box-sizing: border-box;
-    }
+  .hero h2 {
+    font-size: 28px;
+  }
 
-    /* Form adjustments for mobile */
-    form {
-        width: 90%;
-        padding: 20px;
-    }
+  .hero p {
+    font-size: 16px;
+  }
 
-    /* Contact info section adjustments */
-    .contact-info {
-        padding: 20px;
-    }
+  .whatsapp-button {
+    bottom: 10px;
+    right: 10px;
+    padding: 12px 15px;
+    font-size: 14px;
+  }
 
-    /* Container adjustments */
-    .container {
-        padding: 20px;
-    }
+  .footer p {
+    font-size: 14px;
+  }
 
-    /* Adjust footer font size for mobile */
-    footer {
-        font-size: 12px;
-    }
+  .contact-info h3 {
+    font-size: 24px;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
 }
