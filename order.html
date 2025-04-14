@@ -3,95 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> 📝 Order| Classic Delivery Services</title>
+  <title>Place an Order - Classic Delivery</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <img src="images/logo.png" alt="Classic Delivery Logo" style="height: 60px; vertical-align: middle;">
-    <span style="margin-left: 10px;">Place an Order</span>
+
+<header class="header">
+  <div class="logo">
+    <img src="images/logo.png" alt="Classic Delivery Logo">
+    <h1>Classic Delivery</h1>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="order.html">Place Order</a>
+    <a href="tracking.html">Track</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-  <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="about.html">👤 About</a>
-    <a href="services.html">🛵 Services</a>
-    <a href="tracking.html">📍 Tracking</a>
-    <a href="faq.html">❓ FAQ</a>
-    <a href="contact.html">📞 Contact</a>
-    <a href="order.html">📝 Order</a>
-  </nav>
-    <div class="container">
-        <h2>Book Your Delivery</h2>
-        <p>Fill in the details below to place your order.</p>
-        
-        <form id="orderForm">
-            <label for="name">Full Name:</label><br>
-            <input type="text" id="name" required><br><br>
+<section class="page-hero">
+  <h2>Place an Order</h2>
+  <p>Fill out the details below to place your delivery order.</p>
+</section>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" required><br><br>
+<section class="order-form">
+  <form id="delivery-order-form" onsubmit="sendToWhatsApp(event)">
 
-            <label for="phone">Phone Number:</label><br>
-            <input type="tel" id="phone" required><br><br>
+    <label for="sender-name">Sender's Name</label>
+    <input type="text" id="sender-name" name="sender-name" required>
 
-            <label for="pickup">Pickup Address:</label><br>
-            <input type="text" id="pickup" required><br><br>
+    <label for="sender-phone">Sender's Phone</label>
+    <input type="tel" id="sender-phone" name="sender-phone" required>
 
-            <label for="delivery">Delivery Address:</label><br>
-            <input type="text" id="delivery" required><br><br>
+    <label for="pickup-address">Pick-up Address</label>
+    <input type="text" id="pickup-address" name="pickup-address" required>
 
-            <label for="package">Package Details:</label><br>
-            <textarea id="package" rows="4" required></textarea><br><br>
+    <label for="receiver-name">Receiver's Name</label>
+    <input type="text" id="receiver-name" name="receiver-name" required>
 
-            <button type="submit" class="button">Send via WhatsApp</button>
-        </form>
-        
-        <div id="confirmationMessage" style="display: none;">
-            <h3>Your order has been successfully sent!</h3>
-            <p>We will contact you shortly via WhatsApp.</p>
-        </div>
-    </div>
+    <label for="receiver-phone">Receiver's Phone</label>
+    <input type="tel" id="receiver-phone" name="receiver-phone" required>
 
-    <footer>&copy; 2025 Classic Delivery Services. All Rights Reserved.</footer>
+    <label for="delivery-address">Delivery Address</label>
+    <input type="text" id="delivery-address" name="delivery-address" required>
 
-    <!-- JavaScript to handle WhatsApp order submission -->
-    <script>
-        document.getElementById('orderForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevents the form from refreshing the page
+    <label for="item-description">Item Description</label>
+    <textarea id="item-description" name="item-description" rows="3" required></textarea>
 
-            // Get the values entered by the user
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const pickup = document.getElementById('pickup').value;
-            const delivery = document.getElementById('delivery').value;
-            const packageDetails = document.getElementById('package').value;
+    <label for="delivery-type">Delivery Type</label>
+    <select id="delivery-type" name="delivery-type" required>
+      <option value="">-- Select Type --</option>
+      <option value="express">Express (1-2 hours)</option>
+      <option value="same-day">Same Day</option>
+      <option value="scheduled">Scheduled</option>
+    </select>
 
-            // Prepare the WhatsApp message
-            const message = `📦 *New Delivery Order* 🚚%0A
-👤 *Name:* ${name}%0A
-📧 *Email:* ${email}%0A
-📱 *Phone:* ${phone}%0A
-🏠 *Pickup:* ${pickup}%0A
-📍 *Delivery:* ${delivery}%0A
-📦 *Details:* ${packageDetails}`;
+    <label for="additional-notes">Additional Notes (optional)</label>
+    <textarea id="additional-notes" name="additional-notes" rows="2"></textarea>
 
-            // Replace with your WhatsApp number (use international format without the "+" sign)
-            const whatsappNumber = "233591283636"; // Example: Your WhatsApp number
+    <button type="submit" class="button">Submit Order</button>
+  </form>
+</section>
 
-            // Create the WhatsApp URL with the message
-            const url = `https://wa.me/${whatsappNumber}?text=${message}`;
+<footer class="footer">
+  <p>© 2025 Classic Delivery Services • Swift • Secure • Smart</p>
+  <p>Contact: 0591283636 | Location: Madina, Accra</p>
+</footer>
 
-            // Open WhatsApp in a new tab (this does not leave the page)
-            window.open(url, '_blank');
+<a href="https://wa.me/233591283636" class="whatsapp-button" target="_blank">
+  <img src="images/whatsapp-icon.png" alt="WhatsApp Icon"> Order via WhatsApp
+</a>
 
-            // Show confirmation message on the same page
-            document.getElementById('confirmationMessage').style.display = 'block';
+<script src="js/tawkto.js"></script>
 
-            // Optionally, clear the form
-            document.getElementById('orderForm').reset();
-        });
-    </script>
+<script>
+function sendToWhatsApp(event) {
+  event.preventDefault();
+
+  const senderName = document.getElementById("sender-name").value;
+  const senderPhone = document.getElementById("sender-phone").value;
+  const pickupAddress = document.getElementById("pickup-address").value;
+  const receiverName = document.getElementById("receiver-name").value;
+  const receiverPhone = document.getElementById("receiver-phone").value;
+  const deliveryAddress = document.getElementById("delivery-address").value;
+  const itemDescription = document.getElementById("item-description").value;
+  const deliveryType = document.getElementById("delivery-type").value;
+  const additionalNotes = document.getElementById("additional-notes").value;
+
+  if (!senderName || !senderPhone || !pickupAddress || !receiverName || !receiverPhone || !deliveryAddress || !itemDescription || !deliveryType) {
+    alert("Please fill all required fields.");
+    return;
+  }
+
+  const message = `*New Delivery Order* 🚚\n\n*Sender's Name:* ${senderName}\n*Sender's Phone:* ${senderPhone}\n*Pick-up Address:* ${pickupAddress}\n\n*Receiver's Name:* ${receiverName}\n*Receiver's Phone:* ${receiverPhone}\n*Delivery Address:* ${deliveryAddress}\n\n*Item Description:* ${itemDescription}\n*Delivery Type:* ${deliveryType}\n\n*Additional Notes:* ${additionalNotes || 'None'}`;
+
+  const whatsappURL = `https://api.whatsapp.com/send?phone=233591283636&text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, '_blank');
+}
+</script>
+
 </body>
 </html>
