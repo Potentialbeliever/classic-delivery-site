@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classic Delivery Services - Tracking</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Track Your Package - Classic Delivery</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header style="display: flex; align-items: center; justify-content: center;">
-    <img src="images/logo.png" alt="Classic Delivery Logo" style="height: 50px; margin-right: 10px;">
-    <span>🏍️ CLASSIC DELIVERY SERVICES</span>
-  </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="tracking.html">Tracking</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-        <a href="order.html">Order</a>
-    </nav>
+<header class="header">
+  <div class="logo">
+    <img src="images/logo.png" alt="Classic Delivery Logo">
+    <h1>Classic Delivery</h1>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="order.html">Place Order</a>
+    <a href="tracking.html">Track</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-    <div class="container">
-        <h1>Track Your Delivery</h1>
-        <p>Enter your tracking number to check the status of your delivery:</p>
-        
-        <!-- Tracking Form -->
-        <form action="tracking_result.html" method="get">
-            <label for="trackingNumber">Tracking Number:</label>
-            <input type="text" id="trackingNumber" name="trackingNumber" required>
-            <button type="submit" class="button">Track</button>
-        </form>
-        
-        <!-- Placeholder for Tracking Info -->
-        <div class="tracking-info" style="display:none;">
-            <h2>Delivery Status</h2>
-            <p>Status: In Progress</p>
-            <p>Expected Delivery: 7th April 2025</p>
-        </div>
-    </div>
-    
-    <footer>&copy; 2025 Classic Delivery Services. Trusted and Timeless Logistics.</footer>
+<section class="page-hero">
+  <h2>Track Your Package</h2>
+  <p>Enter your tracking ID to check the status of your package.</p>
+</section>
+
+<section class="tracking-form">
+  <form action="track-package.php" method="post">
+    <label for="tracking-id">Tracking ID</label>
+    <input type="text" id="tracking-id" name="tracking-id" required>
+
+    <button type="submit" class="button">Track Package</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <p>© 2025 Classic Delivery Services • Swift • Secure • Smart</p>
+  <p>Contact: 0591283636 | Location: Madina, Accra</p>
+</footer>
+
+<a href="https://wa.me/233591283636" class="whatsapp-button" target="_blank">
+  <img src="images/whatsapp-icon.png" alt="WhatsApp Icon"> Order via WhatsApp
+</a>
+
+<script src="js/tawkto.js"></script>
 
 </body>
 </html>
